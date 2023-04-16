@@ -10,6 +10,7 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import com.epam.mjc.stage0.Animal;
 
 public class AnimalTest {
 
@@ -61,7 +62,7 @@ public class AnimalTest {
             Field hasFurField = Animal.class.getDeclaredField("hasFur");
             hasFurField.setAccessible(true);
 
-            Animal animal = (Animal) constructor.newInstance("someColor", 123123, true);
+            com.epam.mjc.stage0.Animal animal = (Animal) constructor.newInstance("someColor", 123123, true);
 
             Assertions.assertEquals("someColor", (String) colorField.get(animal), "Not correct set up for color field");
             Assertions.assertEquals(123123, (int) numberOfPawsField.get(animal), "Not correct set up for numberOfPawsField field");
