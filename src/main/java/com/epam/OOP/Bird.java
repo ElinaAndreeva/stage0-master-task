@@ -1,6 +1,6 @@
 package com.epam.OOP;
 
-public class Bird extends Animal{
+public class Bird extends com.epam.mjc.stage0.Animal {
 
     public Bird() {
         super("blue", 2, false);
